@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/company_type_select"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".BottomCompanyTypeFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/bottom_select_bar" />
+
+    <TextView
+        android:id="@+id/search1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="광고/마케팅"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/search2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IT"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/search3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="영업/고객상담"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/search4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경영/사무"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/search5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="생산/제조"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/search6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="교육"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
+
+</LinearLayout>
