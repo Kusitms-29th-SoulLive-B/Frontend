@@ -102,9 +102,7 @@ class LogInActivity : AppCompatActivity() {
             }
         }
 
-
     }
-
 
 
 }
