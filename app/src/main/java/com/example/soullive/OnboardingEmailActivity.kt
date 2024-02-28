@@ -22,8 +22,8 @@ class OnboardingEmailActivity : AppCompatActivity() {
 
 
         binding.nextBtn.setOnClickListener {
-            //val intent = Intent(this, OnboardingEmailActivity::class.java)
-            //startActivity(intent)
+            val intent = Intent(this, OnboardingDoneActivity::class.java)
+            startActivity(intent)
         }
 
         binding.root.setOnClickListener {
