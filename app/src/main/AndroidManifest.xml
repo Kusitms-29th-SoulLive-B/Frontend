@@ -14,8 +14,24 @@
         android:theme="@style/Theme.SoulLive"
         tools:targetApi="31">
         <activity
+            android:name=".OnboardingDoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardingEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogInActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
