@@ -3,7 +3,9 @@ package com.example.soullive
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.soullive.databinding.ActivityMainBinding
+import com.kakao.sdk.common.util.Utility
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -16,5 +18,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, LogInActivity::class.java)
         startActivity(intent)
         // 로그인 되어있으면 바로 메인 화면
+
+        val keyHash = Utility.getKeyHash(this)
+        Log.d("Hash", keyHash)
     }
 }
