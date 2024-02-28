@@ -2,4 +2,6 @@
     <string name="app_name">SoulLive</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kakao_app_key">4d96ece34b8bada4defe8a15b4f0eabb</string>
+    <string name="kakao_app_key2">kakao4d96ece34b8bada4defe8a15b4f0eabb</string>
 </resources>

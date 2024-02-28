@@ -39,7 +39,8 @@
 
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask">
 
         <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -48,7 +49,7 @@
 
                 <data
                     android:host="oauth"
-                    android:scheme="kakao4d96ece34b8bada4defe8a15b4f0eabb" />
+                    android:scheme="@string/kakao_app_key2" />
             </intent-filter>
         </activity>
 

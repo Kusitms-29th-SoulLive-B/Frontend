@@ -48,8 +48,6 @@ class LogInActivity : AppCompatActivity() {
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        KakaoSdk.init(this, "4d96ece34b8bada4defe8a15b4f0eabb")
-
         viewPager = binding.viewPager
         val pagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
         viewPager.adapter = pagerAdapter
@@ -67,6 +65,8 @@ class LogInActivity : AppCompatActivity() {
             }
         })
 
+
+        KakaoSdk.init(this, getString(R.string.kakao_app_key))
 
         // 로그인 정보 확인
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
@@ -96,7 +96,7 @@ class LogInActivity : AppCompatActivity() {
 
         kakao_login_button.setOnClickListener {
             if(UserApiClient.instance.isKakaoTalkLoginAvailable(this)){
-                UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
+                UserApiClient.instance.loginWithKakaoTalk(this, callback = callback)
             } else {
                 UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
             }
