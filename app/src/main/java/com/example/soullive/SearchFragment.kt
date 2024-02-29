@@ -30,7 +30,7 @@ class SearchFragment : Fragment() {
 
         modelList.add(FavoriteModelItem(R.drawable.fav1))
         modelList.add(FavoriteModelItem(R.drawable.fav2))
-        modelList.add(FavoriteModelItem(R.drawable.fav3))
+        modelList.add(FavoriteModelItem(R.drawable.fav03))
 
         val rvAdapter = SearchRVAdapter(modelList)
 
