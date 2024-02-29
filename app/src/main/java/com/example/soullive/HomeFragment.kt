@@ -1,5 +1,6 @@
 package com.example.soullive
 
+import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -49,6 +50,11 @@ class HomeFragment : Fragment() {
         loadSelectedModelList() // 기업 별 선택된 모델 목록 출력
         loadKeywordModelList() // 키워드 별 모델 목록 출력
 
+        // 이런 모델은 어때요? 전체 보기 클릭 시
+        binding.aiMoreBtn.setOnClickListener {
+            val intent = Intent(requireContext(), HomeAiModelDetailActivity::class.java)
+            startActivity(intent)
+        }
 
         // 키워드 클릭 시 해당 모델 리스트 출력
         binding.keyword1.setOnClickListener {
