@@ -25,7 +25,7 @@ class SearchModelActivity : AppCompatActivity(){
 
         val layout = LinearLayoutManager(this)
         binding.recentSearchRecyclerview.layoutManager = layout
-        binding.recentSearchRecyclerview.setHasFixedSize(true)
+        //binding.recentSearchRecyclerview.setHasFixedSize(true)
 
         binding.searchBtn.setOnClickListener {
             addNewItem()

@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:weightSum="10">
 
-
         <TextView
             android:id="@+id/recentModel_tv"
             android:layout_width="wrap_content"
