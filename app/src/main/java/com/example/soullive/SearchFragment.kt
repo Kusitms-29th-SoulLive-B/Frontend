@@ -1,5 +1,6 @@
 package com.example.soullive
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +24,17 @@ class SearchFragment : Fragment() {
         initRecycler()
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.searchBoxIv.setOnClickListener {
+
+            val intent = Intent(context, SearchModelActivity::class.java)
+
+            startActivity(intent)
+        }
     }
 
     private fun initRecycler(){

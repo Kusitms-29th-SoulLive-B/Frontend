@@ -1,4 +1,7 @@
 package com.example.soullive
 
-class SearchModelActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class SearchModelActivity : AppCompatActivity(){
+
 }
