@@ -17,6 +17,9 @@
             android:name=".MainActivity3"
             android:exported="true" />
         <activity
+            android:name=".GuideVerifyActivity"
+            android:exported="true" />
+        <activity
             android:name=".DoVerifyActivity1"
             android:exported="true" />
         <activity
