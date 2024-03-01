@@ -21,7 +21,16 @@ class DoVerifyActivity1 : AppCompatActivity() {
         binding.productNameEt.addTextChangedListener(textWatcher)
 
         binding.nextVerify1Btn.setOnClickListener {
+            val intent = Intent(this, DoVerifyActivity2::class.java)
+            startActivity(intent)
+        }
 
+        binding.previous1Ib.setOnClickListener {
+            finish()
+        }
+
+        binding.close1Btn.setOnClickListener {
+            finish()
         }
 
     }

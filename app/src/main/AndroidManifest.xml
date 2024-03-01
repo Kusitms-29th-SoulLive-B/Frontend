@@ -20,6 +20,9 @@
             android:name=".DoVerifyActivity1"
             android:exported="true" />
         <activity
+            android:name=".DoVerifyActivity2"
+            android:exported="true" />
+        <activity
             android:name=".OnboardingDoneActivity"
             android:exported="false" />
         <activity

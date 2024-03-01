@@ -14,12 +14,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
+            android:id="@+id/previous2_ib"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/back_btn" />
 
         <ImageButton
+            android:id="@+id/close2_btn"
             android:layout_width="42dp"
             android:layout_height="40dp"
             android:layout_marginLeft="280dp"
@@ -91,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/addFile_ib"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginBottom="10dp"
@@ -109,7 +111,7 @@
         android:textColor="#5B5B71"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/addFile_ib"
         android:layout_marginTop="10dp"/>
 
     <TextView
@@ -129,15 +131,17 @@
         android:id="@+id/imageView2"
         android:layout_width="380dp"
         android:layout_height="200dp"
-        android:src="@drawable/detailProduct_verify"
+        android:src="@drawable/detailproduct_verify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
+        android:id="@+id/detail_et"
         android:layout_width="360dp"
         android:layout_height="180dp"
         android:hint="250자 이내로 텍스트 입력이 자유롭게 가능해요"
+        android:textColor="@color/white"
         android:textColorHint="#5B5B71"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
