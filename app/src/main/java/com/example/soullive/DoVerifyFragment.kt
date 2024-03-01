@@ -1,5 +1,6 @@
 package com.example.soullive
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +20,8 @@ class DoVerifyFragment : Fragment() {
         binding = FragmentDoverifyBinding.inflate(inflater, container, false)
 
         binding.writeIb.setOnClickListener {
-
+            val intent = Intent(context, DoVerifyActivity1::class.java)
+            startActivity(intent)
         }
 
         return binding.root
