@@ -68,6 +68,29 @@
         android:layout_marginLeft="20dp"
         android:backgroundTint="#5B5B71"/>
 
+    <ImageButton
+        android:id="@+id/showPrevious_ib"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/previous_verify"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/productName_et" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:background="@drawable/gray_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showPrevious_ib"
+        android:enabled="false"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
