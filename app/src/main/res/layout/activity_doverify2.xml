@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="상세 정보를 입력해볼까요?"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="최근 모델"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -84,7 +84,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="380dp"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:src="@drawable/dragfilebox_verify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,36 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         android:layout_marginTop="10dp"/>
 
-    <
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="상품 설명 입력하기"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:src="@drawable/detailProduct_verify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:layout_width="360dp"
+        android:layout_height="180dp"
+        android:hint="250자 이내로 텍스트 입력이 자유롭게 가능해요"
+        android:textColorHint="#5B5B71"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
 
 
@@ -122,7 +151,8 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp">
 
 
         <androidx.appcompat.widget.AppCompatButton
