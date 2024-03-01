@@ -20,7 +20,7 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/verify_tablayout"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/myPage_btn"
         android:background="@color/black"
