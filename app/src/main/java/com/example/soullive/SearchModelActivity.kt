@@ -9,7 +9,8 @@ import com.example.soullive.databinding.ActivitySearchmodelBinding
 class SearchModelActivity : AppCompatActivity(){
 
     private lateinit var binding : ActivitySearchmodelBinding
-    private lateinit var mAdapter: RecentModelRVAdapter
+    private lateinit var recentSearchAdapter: RecentModelRVAdapter
+    private val recentSearchItems = mutableListOf<String>()
 
 
     private var modelList = arrayListOf<RecentModelItem>()
@@ -20,39 +21,19 @@ class SearchModelActivity : AppCompatActivity(){
         setContentView(binding.root)
 
         // mAdapter 초기화
-        mAdapter = RecentModelRVAdapter(this, modelList)
-        binding.recentSearchRecyclerview.adapter = mAdapter
-
-        val layout = LinearLayoutManager(this)
-        binding.recentSearchRecyclerview.layoutManager = layout
-        //binding.recentSearchRecyclerview.setHasFixedSize(true)
+        recentSearchAdapter = RecentModelRVAdapter(this, recentSearchItems)
+        binding.recentSearchRecyclerview.adapter = recentSearchAdapter
 
         binding.searchBtn.setOnClickListener {
-            addNewItem()
-        }
+            val newItem = binding.searchEt.text.toString() // EditText에서 텍스트를 가져옴
+            if (newItem.isNotEmpty()) { // 텍스트가 비어있지 않은 경우에만 처리
+                recentSearchItems.add(newItem) // 리스트에 아이템 추가
+                recentSearchAdapter.notifyDataSetChanged() // 어댑터에 변경 사항을 알림
+                binding.searchEt.text.clear() // EditText의 텍스트를 지움
+            }   }
     }
 
 
 
-    /*private fun addNewItem() {
-        val editText = binding.searchEt
-        val newItemText = editText.text.toString().trim()
-        if (newItemText.isNotEmpty()) {
-            val newItem = RecentModelItem(newItemText)
-            modelList.add(newItem)
-            mAdapter.notifyItemInserted(modelList.size - 1)
-            editText.text.clear() // 입력 필드 비우기
-        }
-    }*/
-
-    private fun addNewItem() {
-        val editText = binding.searchEt
-        val newItemText = editText.text.toString().trim()
-        if (newItemText.isNotEmpty()) {
-            val newItem = RecentModelItem(newItemText)
-            mAdapter.addItem(newItem) // addItem 함수 호출로 리스트에 아이템 추가
-            editText.text.clear() // 입력 필드 비우기
-        }
-    }
 
 }

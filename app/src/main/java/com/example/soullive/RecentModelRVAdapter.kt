@@ -4,52 +4,63 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class RecentModelRVAdapter(private val context: Context, private val dataList : ArrayList<RecentModelItem>) : RecyclerView.Adapter<RecentModelRVAdapter.ItemViewHolder>() {
+class RecentModelRVAdapter(private val context: Context, private var items: MutableList<String>) : BaseAdapter(){
 
-    var mPosition = RecyclerView.NO_POSITION
-
-    fun getPosition(): Int {
-        return mPosition
+    override fun getCount(): Int {
+        return items.size
     }
 
-    fun addItem(recentModel: RecentModelItem) {
-        dataList.add(0, recentModel) // 항상 첫 번째 위치에 추가
-        notifyItemInserted(0)
+    override fun getItem(position: Int): Any {
+        return items[position]
     }
 
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        var view = convertView
+        val viewHolder: ViewHolder
+
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.item_recentsearch, parent, false)
+            viewHolder = ViewHolder(view)
+            view.tag = viewHolder
+        } else {
+            viewHolder = view.tag as ViewHolder
+        }
+
+        val item = getItem(position) as String
+        viewHolder.textViewItem.text = item
+
+        viewHolder.buttonDelete.setOnClickListener {
+            items.removeAt(position)
+            notifyDataSetChanged()
+        }
+
+        return view!!
+    }
+
+    fun addItem(item: String) {
+        items.add(item)
+        notifyDataSetChanged()
+    }
 
     fun removeItem(position: Int) {
-        dataList.removeAt(position)
-        notifyItemRemoved(position)
+        items.removeAt(position)
+        notifyDataSetChanged()
     }
 
-    inner class ItemViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-
-        private val modelName = itemView.findViewById<TextView>(R.id.recentModel_tv)
-
-        fun bind(recentModel: RecentModelItem) {
-            modelName.text = recentModel.name
-        }
+    private class ViewHolder(view: View) {
+        val textViewItem: TextView = view.findViewById(R.id.recentModel_tv)
+        val buttonDelete : ImageButton = view.findViewById(R.id.delete_btn)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_recentsearch, parent, false)
-        return ItemViewHolder(view)
-    }
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.bind(dataList[position])
-        holder.itemView.setOnClickListener {
-            mPosition = position
-            Toast.makeText(it.context, "아이템 클릭", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    override fun getItemCount(): Int {
-        return dataList.size
-    }
 }
