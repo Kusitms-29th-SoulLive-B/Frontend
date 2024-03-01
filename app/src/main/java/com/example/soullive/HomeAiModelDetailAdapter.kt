@@ -1,5 +1,6 @@
 package com.example.soullive
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,9 +57,9 @@ class HomeAiModelDetailAdapter(private var models: List<Model>, private val isGr
             itemView.setOnClickListener {
                 val clickedModel = models[adapterPosition]
                 val modelId = clickedModel.modelId // 클릭된 모델의 Id를 가져옴
-                //val intent = Intent(itemView.context, ModelDetailActivity::class.java)
-                //intent.putExtra("model_id", modelId)
-                //itemView.context.startActivity(intent)
+                val intent = Intent(itemView.context, ModelDetailActivity::class.java)
+                intent.putExtra("model_id", modelId)
+                itemView.context.startActivity(intent)
             }
         }
 

@@ -42,9 +42,9 @@ class HomeAiModelAdapter(private var models: List<Model>)
             itemView.setOnClickListener {
                 val clickedModel = models[adapterPosition]
                 val modelId = clickedModel.modelId // 클릭된 모델의 Id를 가져옴
-                //val intent = Intent(itemView.context, ModelDetailActivity::class.java)
-                //intent.putExtra("model_id", modelId)
-                //itemView.context.startActivity(intent)
+                val intent = Intent(itemView.context, ModelDetailActivity::class.java)
+                intent.putExtra("model_id", modelId)
+                itemView.context.startActivity(intent)
             }
         }
 
