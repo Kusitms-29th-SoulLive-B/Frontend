@@ -13,8 +13,6 @@ class SearchModelActivity : AppCompatActivity(){
     private val recentSearchItems = mutableListOf<String>()
 
 
-    private var modelList = arrayListOf<RecentModelItem>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySearchmodelBinding.inflate(layoutInflater)
@@ -30,7 +28,8 @@ class SearchModelActivity : AppCompatActivity(){
                 recentSearchItems.add(newItem) // 리스트에 아이템 추가
                 recentSearchAdapter.notifyDataSetChanged() // 어댑터에 변경 사항을 알림
                 binding.searchEt.text.clear() // EditText의 텍스트를 지움
-            }   }
+            }
+        }
     }
 
 
