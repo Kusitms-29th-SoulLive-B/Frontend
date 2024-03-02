@@ -1,10 +1,14 @@
 package com.example.soullive
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -12,6 +16,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.soullive.databinding.ActivityLogInBinding
 import com.google.android.material.internal.ViewUtils.hideKeyboard
+import com.kakao.sdk.auth.model.OAuthToken
+import com.kakao.sdk.common.KakaoSdk
+import com.kakao.sdk.common.model.AuthErrorCause
+import com.kakao.sdk.user.UserApiClient
 
 class LogInActivity : AppCompatActivity() {
     lateinit var binding: ActivityLogInBinding
@@ -37,7 +45,7 @@ class LogInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityLogInBinding.inflate(layoutInflater)
+        binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         viewPager = binding.viewPager
@@ -57,10 +65,44 @@ class LogInActivity : AppCompatActivity() {
             }
         })
 
-        binding.loginBtn.setOnClickListener {
-            val intent = Intent(this, OnboardingActivity::class.java)
-            startActivity(intent)
+
+        KakaoSdk.init(this, getString(R.string.kakao_app_key))
+
+        // 로그인 정보 확인
+        UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
+            if (error != null) {
+                Toast.makeText(this, "로그인 기록 없음", Toast.LENGTH_SHORT).show()
+            } else if (tokenInfo != null) {
+                Toast.makeText(this, "자동 로그인", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, OnboardingActivity::class.java)
+                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                finish()
+            }
+        }
+
+        val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
+            if (error != null) {
+                // 로그인 실패
+            }
+            else if (token != null){
+                // 로그인 성공
+                val intent = Intent(this, OnboardingActivity::class.java)
+                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                finish()
+            }
+        }
+
+        val kakao_login_button = findViewById<ImageButton>(R.id.login_btn) // 로그인 버튼
+
+        kakao_login_button.setOnClickListener {
+            if(UserApiClient.instance.isKakaoTalkLoginAvailable(this)){
+                UserApiClient.instance.loginWithKakaoTalk(this, callback = callback)
+            } else {
+                UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
+            }
         }
 
     }
+
+
 }
