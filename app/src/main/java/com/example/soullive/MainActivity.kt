@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         // 바텀 네비게이션 - 탐색 버튼 클릭 시 ExploreFragment 로드
         binding.exploreBtn.setOnClickListener {
-            //loadFragment(ExploreFragment())
+            loadFragment(SearchFragment())
             binding.exploreIc.setImageResource(R.drawable.bottom_navigation_explore_white)
             binding.homeIc.setImageResource(R.drawable.bottom_navigation_home_gray)
         }
