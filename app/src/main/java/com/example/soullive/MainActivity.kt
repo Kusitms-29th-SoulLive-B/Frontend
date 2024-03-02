@@ -46,6 +46,13 @@ class MainActivity : AppCompatActivity() {
             binding.homeIc.setImageResource(R.drawable.bottom_navigation_home_gray)
         }
 
+        // 바텀 네비게이션 - 검증 버튼 클릭 시
+        binding.verifyBtn.setOnClickListener {
+            loadFragment(VerifyFragment())
+            binding.homeIc.setImageResource(R.drawable.bottom_navigation_home_gray)
+            binding.exploreIc.setImageResource(R.drawable.bottom_navigation_explore_gray)
+        }
+
     }
 
     private fun loadFragment(fragment: Fragment) {

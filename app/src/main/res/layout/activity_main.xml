@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/bottom_navigation_verify"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="75dp"
         android:layout_gravity="bottom|center_horizontal" />
 
     <FrameLayout
