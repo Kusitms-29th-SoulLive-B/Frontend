@@ -61,12 +61,15 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     implementation 'com.auth0.android:jwtdecode:2.0.0' //JWT 토큰
-
+    
     implementation 'androidx.viewpager2:viewpager2:1.0.0' //좌우 슬라이드
     implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.13.5'
     implementation 'com.amazonaws:aws-android-sdk-cognito:2.13.5'
     implementation 'com.amazonaws:aws-android-sdk-s3:2.13.5'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
-
     implementation "androidx.cardview:cardview:1.0.0"
+    //카카오 로그인
+    implementation ("com.kakao.sdk:v2-user:2.19.0")
+    implementation ("com.google.android.material:material:1.11.0")
+
 }
