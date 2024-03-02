@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // 로그인 되어있지 않다면 로그인 페이지로
-        val intent = Intent(this, LogInActivity::class.java)
-        startActivity(intent)
+        //val intent = Intent(this, LogInActivity::class.java)
+        //startActivity(intent)
         // 로그인 되어있으면 바로 메인 화면
 
 
