@@ -1,9 +1,11 @@
 package com.example.soullive
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soullive.databinding.ActivityDoverify1Binding
 import com.example.soullive.databinding.ActivityDoverify2Binding
@@ -30,6 +32,10 @@ class DoVerifyActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.root.setOnClickListener {
+            // 화면의 다른 부분을 클릭하면 EditText의 포커스를 해제하고 키보드를 내림
+            hideKeyboard()
+        }
 
     }
 
@@ -49,5 +55,11 @@ class DoVerifyActivity2 : AppCompatActivity() {
         }
 
         override fun afterTextChanged(s: Editable?) {}
+    }
+
+    private fun hideKeyboard() {
+        binding.detailEt.clearFocus()
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 }
