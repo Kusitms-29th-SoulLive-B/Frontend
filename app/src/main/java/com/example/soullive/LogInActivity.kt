@@ -110,17 +110,25 @@ class LogInActivity : AppCompatActivity() {
                 editor.putString("access_token", token.accessToken) // 액세스 토큰
                 editor.apply()
 
-                RetrofitClient.login.getLogIn(accessToken.toString()).enqueue(object :
+                RetrofitClient.login.getLogIn("Bearer ${token.accessToken.toString()}").enqueue(object :
                     Callback<getLogInResponse> {
                     override fun onResponse(call: Call<getLogInResponse>, response: Response<getLogInResponse>) {
+                        Log.d("토큰", token.idToken.toString())
                         if (response.isSuccessful) {
                             val logInResponse = response.body()
                             Log.d("성공",response.toString())
                             // 응답 처리
                         } else {
-                            val errorMessage = "로그인 API 호출 실패: ${response.code()} ${response.message()}"
-                            Log.e("로그인 실패", errorMessage)
-                            // 오류 처리
+                            // 회원가입 실패
+                            val errorMessage = "요청 실패: ${response.code()} ${response.message()}"
+                            Log.e("API 요청 실패", errorMessage)
+                            // 추가 정보 출력
+                            try {
+                                val errorBody = response.errorBody()?.string()
+                                Log.e("API 응답 에러", errorBody ?: "에러 응답 본문이 없습니다.")
+                            } catch (e: Exception) {
+                                Log.e("API 응답 에러", "에러 본문을 읽는 중 에러가 발생했습니다.")
+                            }
                         }
                     }
 

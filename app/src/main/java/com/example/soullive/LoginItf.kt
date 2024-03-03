@@ -20,7 +20,7 @@ interface LoginItf {
 
     @GET("/user/login")
     fun getLogIn(
-        @Header("Authorization") token: String
+        @Header("Authorization") idToken: String
     ): Call<getLogInResponse>
 
 
