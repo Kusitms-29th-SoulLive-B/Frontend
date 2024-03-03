@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.SoulLive"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity3"
@@ -40,13 +41,13 @@
 
         <activity
             android:name=".OnboardingDoneActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".OnboardingEmailActivity"
             android:exported="false" />
         <activity
             android:name=".OnboardingActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LogInActivity"
             android:exported="false" />

@@ -6,13 +6,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.example.soullive.databinding.ActivityOnboardingBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class OnboardingActivity : AppCompatActivity() {
     lateinit var binding: ActivityOnboardingBinding
+
+    var companyType : String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +30,14 @@ class OnboardingActivity : AppCompatActivity() {
         binding.inputName.addTextChangedListener(textWatcher)
         binding.inputType.addTextChangedListener(textWatcher)
 
+
         binding.inputTypeBtn.setOnClickListener { // 기업 타입 선택
             val selectTypeDialog = BottomCompanyTypeFragment()
             selectTypeDialog.setTypeChangeListener(object : BottomCompanyTypeFragment.TypeChangeListener {
                 override fun onTypeChanged(type: String) {
                     binding.inputType.text = type
+                    companyType = type
+                    Log.d("회사타입",type)
                     binding.inputType.setTextColor(ContextCompat.getColor(this@OnboardingActivity, android.R.color.white))
                     binding.txtType.visibility = View.VISIBLE
                 }
@@ -36,8 +46,13 @@ class OnboardingActivity : AppCompatActivity() {
         }
 
         binding.nextBtn.setOnClickListener {
-            val intent = Intent(this, OnboardingEmailActivity::class.java)
+            val companyName = binding.inputName.text.toString()
+            val intent = Intent(this, OnboardingEmailActivity::class.java).apply {
+                putExtra("companyName", companyName)
+                putExtra("companyType", companyType)
+            }
             startActivity(intent)
+
         }
 
         binding.root.setOnClickListener {
@@ -74,4 +89,5 @@ class OnboardingActivity : AppCompatActivity() {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
+
 }
