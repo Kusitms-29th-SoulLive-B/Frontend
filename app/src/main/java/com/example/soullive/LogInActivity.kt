@@ -22,6 +22,9 @@ import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.model.AuthErrorCause
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LogInActivity : AppCompatActivity() {
     lateinit var binding: ActivityLogInBinding
@@ -77,16 +80,16 @@ class LogInActivity : AppCompatActivity() {
         KakaoSdk.init(this,getString(R.string.kakao_app_key))
 
         // 로그인 정보 확인
-        UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
+        /*UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
             if (error != null) {
                 Toast.makeText(this, "로그인 기록 없음", Toast.LENGTH_SHORT).show()
             } else if (tokenInfo != null) {
                 Toast.makeText(this, "자동 로그인", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-                finish()
+                finish()공
             }
-        }
+        }*/
 
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
             if (error != null) {
@@ -106,6 +109,26 @@ class LogInActivity : AppCompatActivity() {
                 editor.putString("kakao_token", tokenJson)  // 카카오 토큰 전체
                 editor.putString("access_token", token.accessToken) // 액세스 토큰
                 editor.apply()
+
+                RetrofitClient.login.getLogIn(accessToken.toString()).enqueue(object :
+                    Callback<getLogInResponse> {
+                    override fun onResponse(call: Call<getLogInResponse>, response: Response<getLogInResponse>) {
+                        if (response.isSuccessful) {
+                            val logInResponse = response.body()
+                            Log.d("성공",response.toString())
+                            // 응답 처리
+                        } else {
+                            val errorMessage = "로그인 API 호출 실패: ${response.code()} ${response.message()}"
+                            Log.e("로그인 실패", errorMessage)
+                            // 오류 처리
+                        }
+                    }
+
+                    override fun onFailure(call: Call<getLogInResponse>, t: Throwable) {
+                        // 네트워크 오류 등으로 요청 실패 처리
+                        Log.e("로그인 호출 실패", "요청 실패: ${t.message}", t)
+                    }
+                })
 
                 val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
