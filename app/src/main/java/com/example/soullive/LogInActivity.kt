@@ -12,8 +12,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.soullive.databinding.ActivityLogInBinding
+import com.example.soullive.home.ViewPager1Fragment
+import com.example.soullive.home.ViewPager2Fragment
+import com.example.soullive.home.ViewPager3Fragment
 import com.example.soullive.login_api.RetrofitClient
 import com.example.soullive.login_api.getLogInResponse
+import com.example.soullive.onboarding.OnboardingActivity
 import com.google.gson.Gson
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.KakaoSdk

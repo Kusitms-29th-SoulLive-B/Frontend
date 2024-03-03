@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

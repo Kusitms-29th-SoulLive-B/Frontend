@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -10,10 +10,8 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
+import com.example.soullive.R
 import com.example.soullive.databinding.ActivityOnboardingBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class OnboardingActivity : AppCompatActivity() {
     lateinit var binding: ActivityOnboardingBinding
@@ -34,7 +32,8 @@ class OnboardingActivity : AppCompatActivity() {
 
         binding.inputTypeBtn.setOnClickListener { // 기업 타입 선택
             val selectTypeDialog = BottomCompanyTypeFragment()
-            selectTypeDialog.setTypeChangeListener(object : BottomCompanyTypeFragment.TypeChangeListener {
+            selectTypeDialog.setTypeChangeListener(object :
+                BottomCompanyTypeFragment.TypeChangeListener {
                 override fun onTypeChanged(type: String) {
                     binding.inputType.text = type
                     companyType = type

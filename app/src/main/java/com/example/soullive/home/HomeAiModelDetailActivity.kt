@@ -1,9 +1,10 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.soullive.R
 import com.example.soullive.databinding.ActivityHomeAiModelDetailBinding
 
 class HomeAiModelDetailActivity : AppCompatActivity() {

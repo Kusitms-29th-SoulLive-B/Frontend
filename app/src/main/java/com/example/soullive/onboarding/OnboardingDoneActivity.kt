@@ -1,10 +1,10 @@
-package com.example.soullive
+package com.example.soullive.onboarding
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.soullive.MainActivity
 import com.example.soullive.databinding.ActivityOnboardingDoneBinding
-import com.example.soullive.databinding.ActivityOnboardingEmailBinding
 
 class OnboardingDoneActivity : AppCompatActivity() {
     lateinit var binding: ActivityOnboardingDoneBinding

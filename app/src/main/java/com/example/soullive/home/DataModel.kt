@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.home
 
 // 임시 모델
 data class Model(

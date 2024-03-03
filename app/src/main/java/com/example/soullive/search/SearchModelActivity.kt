@@ -2,7 +2,7 @@ package com.example.soullive.search
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.soullive.RecentModelRVAdapter
+import com.example.soullive.home.RecentModelRVAdapter
 import com.example.soullive.databinding.ActivitySearchmodelBinding
 
 class SearchModelActivity : AppCompatActivity(){

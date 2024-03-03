@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#0F1017"
     android:orientation="vertical"
-    tools:context=".ModelDetailActivity">
+    tools:context=".home.ModelDetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"

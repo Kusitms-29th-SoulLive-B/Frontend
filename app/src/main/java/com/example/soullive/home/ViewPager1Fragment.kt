@@ -1,10 +1,11 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.soullive.R
 
 class ViewPager1Fragment : Fragment() {
 

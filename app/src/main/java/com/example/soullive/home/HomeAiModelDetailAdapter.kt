@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.soullive.R
 
 class HomeAiModelDetailAdapter(private var models: List<Model>, private val isGridMode: Boolean)
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

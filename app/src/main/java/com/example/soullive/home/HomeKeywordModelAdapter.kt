@@ -1,7 +1,6 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +8,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.soullive.R
 
-class HomeAiModelAdapter(private var models: List<Model>)
-    : RecyclerView.Adapter<HomeAiModelAdapter.HomeAiModelViewHolder>() {
+class HomeKeywordModelAdapter(private var models: List<Model>)
+    : RecyclerView.Adapter<HomeKeywordModelAdapter.HomKeywordModelViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAiModelViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_home_ai_model, parent, false)
-        return HomeAiModelViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomKeywordModelViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_home_keyword_model, parent, false)
+        return HomKeywordModelViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: HomeAiModelViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HomKeywordModelViewHolder, position: Int) {
         val model = models[position]
         holder.bind(model)
     }
@@ -33,10 +33,11 @@ class HomeAiModelAdapter(private var models: List<Model>)
         notifyDataSetChanged()
     }
 
-    inner class HomeAiModelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class HomKeywordModelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val modelImage: ImageView = itemView.findViewById(R.id.model_img)
         private val modelName: TextView = itemView.findViewById(R.id.model_name)
-        private val modelType: TextView = itemView.findViewById(R.id.model_type)
+        private val companyName: TextView = itemView.findViewById(R.id.company_name)
+        private val title: TextView = itemView.findViewById(R.id.title)
 
         init {
             itemView.setOnClickListener {
@@ -50,7 +51,6 @@ class HomeAiModelAdapter(private var models: List<Model>)
 
         fun bind(modelList: Model) {
             modelName.text = modelList.name
-            modelType.text = modelList.job
 
             Glide.with(itemView.context)
                 .load(modelList.image)
@@ -58,5 +58,6 @@ class HomeAiModelAdapter(private var models: List<Model>)
                 .error(R.drawable.img_model_sample) // 에러 이미지 리소스
                 .into(modelImage)
         }
+
     }
 }

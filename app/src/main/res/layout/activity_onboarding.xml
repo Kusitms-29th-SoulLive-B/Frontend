@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#0F1017"
     android:orientation="vertical"
-    tools:context=".OnboardingActivity">
+    tools:context=".onboarding.OnboardingActivity">
 
     <ImageView
         android:id="@+id/back_btn"

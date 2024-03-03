@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
+import com.example.soullive.R
 import com.example.soullive.databinding.ActivityOnboardingEmailBinding
 import com.example.soullive.login_api.RetrofitClient
 import com.example.soullive.login_api.SignUpResponse

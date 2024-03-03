@@ -28,20 +28,20 @@
         <activity android:name=".search.SearchModelActivity"
             android:exported="true"/>
         <activity
-            android:name=".ModelDetailActivity"
+            android:name=".home.ModelDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeAiModelDetailActivity"
+            android:name=".home.HomeAiModelDetailActivity"
             android:exported="false" />
 
         <activity
-            android:name=".OnboardingDoneActivity"
+            android:name=".onboarding.OnboardingDoneActivity"
             android:exported="true" />
         <activity
-            android:name=".OnboardingEmailActivity"
+            android:name=".onboarding.OnboardingEmailActivity"
             android:exported="false" />
         <activity
-            android:name=".OnboardingActivity"
+            android:name=".onboarding.OnboardingActivity"
             android:exported="true" />
         <activity
             android:name=".LogInActivity"

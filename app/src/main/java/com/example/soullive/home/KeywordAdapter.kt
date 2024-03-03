@@ -1,10 +1,11 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.soullive.R
 
 class KeywordAdapter(private var keywords: List<String>)
     : RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {

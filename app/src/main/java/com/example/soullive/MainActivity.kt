@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 
 import com.example.soullive.databinding.ActivityMainBinding
+import com.example.soullive.home.HomeFragment
 import com.example.soullive.search.SearchFragment
 import com.example.soullive.verify.VerifyFragment
 import com.kakao.sdk.common.util.Utility

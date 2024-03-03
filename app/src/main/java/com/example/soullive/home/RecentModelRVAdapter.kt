@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
+import com.example.soullive.R
 
 class RecentModelRVAdapter(private val context: Context, private var items: MutableList<String>) : BaseAdapter(){
 

@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.home
 
 import android.content.Intent
 import android.content.res.Resources
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.soullive.R
 import com.example.soullive.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
