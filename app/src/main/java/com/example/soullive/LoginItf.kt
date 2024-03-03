@@ -23,5 +23,4 @@ interface LoginItf {
         @Header("Authorization") idToken: String
     ): Call<getLogInResponse>
 
-
 }

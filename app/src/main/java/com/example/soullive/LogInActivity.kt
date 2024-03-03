@@ -110,13 +110,14 @@ class LogInActivity : AppCompatActivity() {
                 editor.putString("access_token", token.accessToken) // 액세스 토큰
                 editor.apply()
 
-                RetrofitClient.login.getLogIn("Bearer ${token.accessToken.toString()}").enqueue(object :
+                RetrofitClient.login.getLogIn("Bearer ${token.idToken}").enqueue(object :
                     Callback<getLogInResponse> {
                     override fun onResponse(call: Call<getLogInResponse>, response: Response<getLogInResponse>) {
                         Log.d("토큰", token.idToken.toString())
                         if (response.isSuccessful) {
                             val logInResponse = response.body()
-                            Log.d("성공",response.toString())
+                            Log.d("성공",response.body().toString())
+
                             // 응답 처리
                         } else {
                             // 회원가입 실패
