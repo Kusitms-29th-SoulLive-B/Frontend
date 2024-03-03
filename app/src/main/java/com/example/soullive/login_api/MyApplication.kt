@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.login_api
 
 import android.app.Application
 import com.kakao.sdk.common.KakaoSdk

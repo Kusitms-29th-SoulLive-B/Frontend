@@ -9,6 +9,8 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
 import com.example.soullive.databinding.ActivityOnboardingEmailBinding
+import com.example.soullive.login_api.RetrofitClient
+import com.example.soullive.login_api.SignUpResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

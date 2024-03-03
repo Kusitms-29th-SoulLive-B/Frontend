@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.verify
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import com.example.soullive.databinding.ActivityDoverify1Binding
+import com.example.soullive.R
 import com.example.soullive.databinding.ActivityDoverify2Binding
 
 class DoVerifyActivity2 : AppCompatActivity() {

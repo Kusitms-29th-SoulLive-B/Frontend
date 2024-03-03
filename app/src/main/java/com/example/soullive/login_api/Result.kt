@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.login_api
 
 import com.google.gson.annotations.SerializedName
 

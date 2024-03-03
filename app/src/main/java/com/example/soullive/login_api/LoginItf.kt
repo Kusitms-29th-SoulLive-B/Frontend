@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.login_api
 
 import retrofit2.Call
 import retrofit2.http.Field

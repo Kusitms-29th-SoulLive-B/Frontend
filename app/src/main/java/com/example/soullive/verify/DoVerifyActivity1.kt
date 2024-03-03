@@ -1,16 +1,14 @@
-package com.example.soullive
+package com.example.soullive.verify
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.soullive.R
 import com.example.soullive.databinding.ActivityDoverify1Binding
-import com.example.soullive.databinding.ActivityMainBinding
-import com.google.android.material.internal.ViewUtils.hideKeyboard
 
 class DoVerifyActivity1 : AppCompatActivity() {
 

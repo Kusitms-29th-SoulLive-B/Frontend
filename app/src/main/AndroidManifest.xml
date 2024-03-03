@@ -14,23 +14,18 @@
         android:theme="@style/Theme.SoulLive"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity3"
+            android:name=".verify.GuideVerifyActivity"
             android:exported="true" />
         <activity
-            android:name=".GuideVerifyActivity"
+            android:name=".verify.DoVerifyActivity1"
             android:exported="true" />
         <activity
-            android:name=".DoVerifyActivity1"
-            android:exported="true" />
-        <activity
-            android:name=".DoVerifyActivity2"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity2"
+            android:name=".verify.DoVerifyActivity2"
             android:exported="true" />
 
-        <activity android:name=".SearchModelActivity"
+        <activity android:name=".search.SearchModelActivity"
             android:exported="true"/>
         <activity
             android:name=".ModelDetailActivity"

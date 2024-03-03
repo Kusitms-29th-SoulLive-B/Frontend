@@ -1,9 +1,8 @@
-package com.example.soullive
+package com.example.soullive.search
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.soullive.RecentModelRVAdapter
 import com.example.soullive.databinding.ActivitySearchmodelBinding
 
 class SearchModelActivity : AppCompatActivity(){

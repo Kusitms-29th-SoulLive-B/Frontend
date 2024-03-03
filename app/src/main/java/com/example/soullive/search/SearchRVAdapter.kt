@@ -1,23 +1,23 @@
-package com.example.soullive
+package com.example.soullive.search
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soullive.databinding.ItemFavoritemodelBinding
+import com.example.soullive.R
 
 class SearchRVAdapter(val modelList : MutableList<FavoriteModelItem>) : RecyclerView.Adapter<SearchRVAdapter.SearchViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SearchRVAdapter.SearchViewHolder {
+    ): SearchViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item_favoritemodel, parent, false)
         return SearchViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: SearchRVAdapter.SearchViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
 
         holder.bindItems(modelList[position])
     }

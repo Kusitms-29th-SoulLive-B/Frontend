@@ -1,10 +1,11 @@
-package com.example.soullive
+package com.example.soullive.verify
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.soullive.R
 import com.example.soullive.databinding.FragmentVerifyBinding
 import com.google.android.material.tabs.TabLayout
 

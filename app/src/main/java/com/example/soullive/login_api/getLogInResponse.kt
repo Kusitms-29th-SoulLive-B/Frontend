@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.login_api
 
 data class getLogInResponse(
     val code: Int,

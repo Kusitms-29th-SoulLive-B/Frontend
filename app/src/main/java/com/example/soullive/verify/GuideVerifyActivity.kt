@@ -1,4 +1,4 @@
-package com.example.soullive
+package com.example.soullive.verify
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
