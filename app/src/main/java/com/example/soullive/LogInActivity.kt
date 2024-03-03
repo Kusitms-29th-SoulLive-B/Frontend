@@ -1,27 +1,30 @@
 package com.example.soullive
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.inputmethod.InputMethodManager
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.soullive.databinding.ActivityLogInBinding
-import com.google.android.material.internal.ViewUtils.hideKeyboard
+import com.example.soullive.home.ViewPager1Fragment
+import com.example.soullive.home.ViewPager2Fragment
+import com.example.soullive.home.ViewPager3Fragment
+import com.example.soullive.login_api.RetrofitClient
+import com.example.soullive.login_api.getLogInResponse
+import com.example.soullive.onboarding.OnboardingActivity
 import com.google.gson.Gson
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.KakaoSdk
-import com.kakao.sdk.common.model.AuthErrorCause
-import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LogInActivity : AppCompatActivity() {
     lateinit var binding: ActivityLogInBinding
@@ -74,19 +77,19 @@ class LogInActivity : AppCompatActivity() {
         Log.d("my log", ""+accessToken)
 
 
-        KakaoSdk.init(this, getString(R.string.kakao_app_key))
+        KakaoSdk.init(this,getString(R.string.kakao_app_key))
 
         // 로그인 정보 확인
-        UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
+        /*UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
             if (error != null) {
                 Toast.makeText(this, "로그인 기록 없음", Toast.LENGTH_SHORT).show()
             } else if (tokenInfo != null) {
                 Toast.makeText(this, "자동 로그인", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-                finish()
+                finish()공
             }
-        }
+        }*/
 
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
             if (error != null) {
@@ -107,9 +110,48 @@ class LogInActivity : AppCompatActivity() {
                 editor.putString("access_token", token.accessToken) // 액세스 토큰
                 editor.apply()
 
-                val intent = Intent(this, OnboardingActivity::class.java)
+                RetrofitClient.login.getLogIn("Bearer ${token.idToken}").enqueue(object :
+                    Callback<getLogInResponse> {
+                    override fun onResponse(call: Call<getLogInResponse>, response: Response<getLogInResponse>) {
+                        Log.d("토큰", token.idToken.toString())
+                        if (response.isSuccessful) {
+                            val logInResponse = response.body()
+                            Log.d("성공",response.body().toString())
+                            if (logInResponse != null) {
+                                if (logInResponse.result.isUser) {
+                                    val intent = Intent(this@LogInActivity, MainActivity::class.java)
+                                    startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                                    finish()
+                                } else {
+                                    val intent = Intent(this@LogInActivity, OnboardingActivity::class.java)
+                                    intent.putExtra("accessToken", logInResponse.result.accessToken)
+                                    startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                                    finish()
+                                }
+                            }
+                        } else {
+                            // 회원가입 실패
+                            val errorMessage = "요청 실패: ${response.code()} ${response.message()}"
+                            Log.e("API 요청 실패", errorMessage)
+                            // 추가 정보 출력
+                            try {
+                                val errorBody = response.errorBody()?.string()
+                                Log.e("API 응답 에러", errorBody ?: "에러 응답 본문이 없습니다.")
+                            } catch (e: Exception) {
+                                Log.e("API 응답 에러", "에러 본문을 읽는 중 에러가 발생했습니다.")
+                            }
+                        }
+                    }
+
+                    override fun onFailure(call: Call<getLogInResponse>, t: Throwable) {
+                        // 네트워크 오류 등으로 요청 실패 처리
+                        Log.e("로그인 호출 실패", "요청 실패: ${t.message}", t)
+                    }
+                })
+
+                /*val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-                finish()
+                finish()*/
             }
         }
 

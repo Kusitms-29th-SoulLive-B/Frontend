@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#0F1017"
     android:orientation="vertical"
-    tools:context=".HomeAiModelDetailActivity">
+    tools:context=".home.HomeAiModelDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -8,7 +8,7 @@
     android:padding="10dp"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".BottomCompanyTypeFragment">
+    tools:context=".onboarding.BottomCompanyTypeFragment">
 
     <ImageView
         android:layout_width="wrap_content"
