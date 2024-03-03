@@ -74,7 +74,7 @@ class LogInActivity : AppCompatActivity() {
         Log.d("my log", ""+accessToken)
 
 
-        KakaoSdk.init(this, getString(R.string.kakao_app_key))
+        KakaoSdk.init(this,getString(R.string.kakao_app_key))
 
         // 로그인 정보 확인
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->

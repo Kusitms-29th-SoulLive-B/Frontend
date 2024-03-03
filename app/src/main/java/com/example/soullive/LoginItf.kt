@@ -3,6 +3,7 @@ package com.example.soullive
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 
@@ -16,5 +17,11 @@ interface LoginItf {
         @Field("type") type: String,
         @Field("email") email: String
     ): Call<SignUpResponse>
+
+    @GET("/user/login")
+    fun getLogIn(
+        @Header("Authorization") token: String
+    ): Call<getLogInResponse>
+
 
 }
