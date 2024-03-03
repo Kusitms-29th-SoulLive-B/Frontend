@@ -71,14 +71,13 @@ class OnboardingEmailActivity : AppCompatActivity() {
 
         val companyName = intent.getStringExtra("companyName")
         val companyType = intent.getStringExtra("companyType")
-        val sharedPreferences = getSharedPreferences("my_token", Context.MODE_PRIVATE)
-        val accessToken = sharedPreferences.getString("access_token", null)
+        val accessToken = intent.getStringExtra("accessToken")
         Log.d("토큰",accessToken.toString())
         Log.d("이름",companyName.toString())
         Log.d("타입1",companyType.toString())
 
 
-        RetrofitClient.login.postSignUp(accessToken.toString(), companyName.toString(), companyType.toString(), email)
+        RetrofitClient.login.postSignUp("Bearer ${accessToken}", companyName.toString(), companyType.toString(), email)
             .enqueue(object : Callback<SignUpResponse> {
                 override fun onResponse(call: Call<SignUpResponse>, response: Response<SignUpResponse>) {
                     if (response.isSuccessful) {

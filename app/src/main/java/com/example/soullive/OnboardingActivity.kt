@@ -30,6 +30,7 @@ class OnboardingActivity : AppCompatActivity() {
         binding.inputName.addTextChangedListener(textWatcher)
         binding.inputType.addTextChangedListener(textWatcher)
 
+        val accessToken = intent.getStringExtra("accessToken")
 
         binding.inputTypeBtn.setOnClickListener { // 기업 타입 선택
             val selectTypeDialog = BottomCompanyTypeFragment()
@@ -49,6 +50,7 @@ class OnboardingActivity : AppCompatActivity() {
             val companyName = binding.inputName.text.toString()
             val intent = Intent(this, OnboardingEmailActivity::class.java).apply {
                 putExtra("companyName", companyName)
+                putExtra("accessToken",accessToken)
                 putExtra("companyType", companyType)
             }
             startActivity(intent)

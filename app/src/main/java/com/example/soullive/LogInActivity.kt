@@ -117,6 +117,16 @@ class LogInActivity : AppCompatActivity() {
                         if (response.isSuccessful) {
                             val logInResponse = response.body()
                             Log.d("성공",response.body().toString())
+                            if (logInResponse!!.result.isUser){
+                                val intent = Intent(this@LogInActivity, MainActivity::class.java)
+                                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                                finish()
+                            } else{
+                                val intent = Intent(this@LogInActivity, OnboardingActivity::class.java)
+                                intent.putExtra("accessToken",logInResponse.result.accessToken)
+                                startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                                finish()
+                            }
 
                             // 응답 처리
                         } else {
@@ -139,9 +149,9 @@ class LogInActivity : AppCompatActivity() {
                     }
                 })
 
-                val intent = Intent(this, OnboardingActivity::class.java)
+                /*val intent = Intent(this, OnboardingActivity::class.java)
                 startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-                finish()
+                finish()*/
             }
         }
 
