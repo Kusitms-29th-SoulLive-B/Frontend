@@ -29,6 +29,10 @@ class SearchModelActivity : AppCompatActivity(){
                 binding.searchEt.text.clear() // EditText의 텍스트를 지움
             }
         }
+
+        binding.backBtn.setOnClickListener {
+            finish()
+        }
     }
 
 
