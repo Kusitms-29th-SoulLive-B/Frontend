@@ -27,7 +27,7 @@ class DoVerifyActivity2 : AppCompatActivity() {
         binding.detailEt.addTextChangedListener(textWatcher)
 
         binding.nextVerify2Btn.setOnClickListener {
-            val intent = Intent(this, GuideVerifyActivity::class.java)
+            val intent = Intent(this, DoVerifyActivity3::class.java)
 
             startActivity(intent)
         }
