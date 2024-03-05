@@ -109,6 +109,57 @@
         android:gravity="center"
         android:layout_marginLeft="250dp"/>
 
+    <ImageView
+        android:id="@+id/contents1"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:src="@drawable/contentsbox_verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/contents2"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:src="@drawable/contentsbox_verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/contents3"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:src="@drawable/contentsbox_verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TV 광고"
+        android:textColor="#5B5B71"
+        app:layout_constraintBottom_toBottomOf="@+id/contents1"
+        app:layout_constraintEnd_toEndOf="@+id/contents1"
+        app:layout_constraintStart_toStartOf="@+id/contents1"
+        app:layout_constraintTop_toTopOf="@+id/contents1" />
+
+    <ImageView
+        android:id="@+id/choose1_iv"
+        android:layout_width="100dp"
+        android:layout_height="37dp"
+        android:src="@drawable/contentschoose_verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
