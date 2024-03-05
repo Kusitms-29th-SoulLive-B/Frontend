@@ -63,6 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
 
     <ImageButton
+        android:id="@+id/guide_btn"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/guide_verify"
