@@ -15,7 +15,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".VerifyResultDetailActivity1"
+            android:name=".verify_result_go.VerifyResultDetailActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".verify_result_go.VerifyResultDetailActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".verify_result_go.VerifyResultDetailActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".verify_result_go.VerifyResultDetailActivity1"
             android:exported="false" />
         <activity
             android:name=".verify_result_go.VerifyResultActivity1"

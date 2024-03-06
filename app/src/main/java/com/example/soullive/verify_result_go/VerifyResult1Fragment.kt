@@ -1,5 +1,6 @@
 package com.example.soullive.verify_result_go
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,6 +37,12 @@ class VerifyResult1Fragment : Fragment(), VerifyResultModelAdapter.ModelItemClic
         val keywords = listOf("브랜드 평판 1위", "떠오르는", "고급스러운")
         keywordAdapter.updateData(keywords)
 
+        // 검증 완료-종합 페이지로 이동
+        binding.modelImg.setOnClickListener {
+            val intent = Intent(context, VerifyResultDetailActivity1::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 
@@ -45,15 +52,15 @@ class VerifyResult1Fragment : Fragment(), VerifyResultModelAdapter.ModelItemClic
             ModelResult(1, 1, "고윤정", "영화ㆍ드라마 배우", "MAA",
                 "2019년 데뷔", "브랜드 평판 1위", "떠오르는", "고급스러운",
                 R.drawable.img_model_1),
-            ModelResult(2, 2, "이도현", "영화ㆍ드라마 배우", "MAA",
-                "2019년 데뷔", "브랜드 평판 1위", "떠오르는", "고급스러운",
-                R.drawable.img_model_sample),
-            ModelResult(3, 3, "고윤정", "영화ㆍ드라마 배우", "MAA",
-                "2019년 데뷔", "브랜드 평판 1위", "떠오르는", "고급스러운",
-                R.drawable.img_model_1),
-            ModelResult(4, 4, "고윤정", "영화ㆍ드라마 배우", "MAA",
-                "2019년 데뷔", "브랜드 평판 1위", "떠오르는", "고급스러운",
-                R.drawable.img_model_1),
+            ModelResult(2, 2, "모델2", "영화ㆍ드라마 배우", "MAA",
+                "2019년 데뷔", "브랜드 평판 2위", "떠오르는", "고급스러운",
+                R.drawable.img_model_2),
+            ModelResult(3, 3, "모델3", "영화ㆍ드라마 배우", "MAA",
+                "2019년 데뷔", "브랜드 평판 3위", "떠오르는", "고급스러운",
+                R.drawable.img_model_3),
+            ModelResult(4, 4, "모델4", "영화ㆍ드라마 배우", "MAA",
+                "2019년 데뷔", "브랜드 평판 4위", "떠오르는", "고급스러운",
+                R.drawable.img_model_4),
        )
 
         // 어댑터에 데이터 설정

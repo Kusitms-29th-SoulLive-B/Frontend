@@ -3,16 +3,16 @@ package com.example.soullive.verify_result_go
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soullive.databinding.ActivityVerifyResultDetail1Binding
+import com.example.soullive.databinding.ActivityVerifyResultDetail4Binding
 import com.example.soullive.home.KeywordAdapter
 
-class VerifyResultDetailActivity1 : AppCompatActivity() {
-    lateinit var binding: ActivityVerifyResultDetail1Binding
+class VerifyResultDetailActivity4 : AppCompatActivity() {
+    lateinit var binding: ActivityVerifyResultDetail4Binding
     lateinit var keywordAdapter: KeywordAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityVerifyResultDetail1Binding.inflate(layoutInflater)
+        binding = ActivityVerifyResultDetail4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // 모델 키워드 목록

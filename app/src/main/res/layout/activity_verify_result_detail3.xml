@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#0F1017"
     android:orientation="vertical"
-    tools:context=".verify_result_go.VerifyResultDetailActivity1">
+    tools:context=".verify_result_go.VerifyResultDetailActivity3">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     android:layout_marginRight="24dp"
                     android:textColor="@color/white"
                     android:textSize="18dp"
-                    android:text="종합" />
+                    android:text="부정이슈" />
 
             </LinearLayout>
 
@@ -237,7 +237,7 @@
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="종합 결과" />
+                    android:text="부정이슈" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -245,13 +245,13 @@
                     android:layout_marginTop="4dp"
                     android:textColor="#A2A5AA"
                     android:textSize="14dp"
-                    android:text="화제성, 부정 이슈, 전략방향 적합도를 분석했어요" />
+                    android:text="학교 폭력, 탈세 등 부정적인 영향을 줄 수 있는 논란이\n있었는지 분석했어요." />
 
             </LinearLayout>
-            
+
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="365dp"
+                android:layout_height="392dp"
                 android:background="#1D1C27" >
 
                 <ImageView
@@ -259,32 +259,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:padding="25dp"
-                    android:layout_marginRight="15dp"
-                    android:src="@drawable/model_result_detail1_graph" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:background="#1D1C27" >
-
-                <ImageView
-                    android:id="@+id/graph_context"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="30dp"
-                    android:scaleType="centerCrop"
-                    android:padding="35dp"
-                    android:src="@drawable/model_result_detail_graph_context" />
+                    android:src="@drawable/model_result_detail3_graph" />
 
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="50dp"
+                android:layout_marginVertical="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:orientation="vertical">
 
@@ -294,81 +276,32 @@
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="소속사 정보" />
+                    android:text="타 광고 계약기간 분석" />
 
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="50dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:textColor="#878793"
-                            android:textSize="14dp"
-                            android:text="소속사명" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:textColor="#878793"
-                            android:textSize="14dp"
-                            android:text="이메일" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#878793"
-                            android:textSize="14dp"
-                            android:text="소속사 링크" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/company_name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:textColor="#CDCBD4"
-                            android:textSize="14dp"
-                            android:text="MAA" />
-
-                        <TextView
-                            android:id="@+id/email"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="10dp"
-                            android:textColor="#CDCBD4"
-                            android:textSize="14dp"
-                            android:text="MAA@Official.com" />
-
-                        <TextView
-                            android:id="@+id/company_rink"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#CDCBD4"
-                            android:textSize="14dp"
-                            android:text="www.maa.co.kr" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
+                    android:layout_marginTop="4dp"
+                    android:textColor="#A2A5AA"
+                    android:textSize="14dp"
+                    android:text="해당 모델의 타 광고 계약 기간을 조사했어요." />
 
             </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="311dp"
+                android:layout_marginBottom="50dp"
+                android:background="#0F1017" >
+
+                <ImageView
+                    android:id="@+id/graph2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/model_result_detail3_ad_graph" />
+
+            </FrameLayout>
 
         </LinearLayout>
 

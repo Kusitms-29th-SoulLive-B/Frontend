@@ -62,8 +62,10 @@ class VerifyResultModelAdapter(private var models: List<ModelResult>,
             // 선택된 아이템인 경우 배경 이미지뷰를 표시하고 아니면 숨김
             if (position == selectedItemPosition) {
                 itemView.findViewById<View>(R.id.bg_model).visibility = View.VISIBLE
+                itemView.findViewById<View>(R.id.bg_model_default).visibility = View.GONE
             } else {
                 itemView.findViewById<View>(R.id.bg_model).visibility = View.GONE
+                itemView.findViewById<View>(R.id.bg_model_default).visibility = View.VISIBLE
             }
 
             itemView.setOnClickListener {

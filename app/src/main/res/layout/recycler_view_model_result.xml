@@ -23,6 +23,13 @@
                 android:layout_height="match_parent" />
 
             <ImageView
+                android:id="@+id/bg_model_default"
+                android:src="@drawable/bg_model_card_shadow"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
                 android:id="@+id/bg_model"
                 android:src="@drawable/bg_model_result_shadow"
                 android:scaleType="centerCrop"
