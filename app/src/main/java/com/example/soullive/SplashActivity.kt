@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.soullive.verify_result_go.VerifyResultActivity1
+import com.example.soullive.verify_result_it.VerifyResultActivity2
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
@@ -18,9 +19,7 @@ class SplashActivity : AppCompatActivity() {
         val mainExecutor: Executor = ContextCompat.getMainExecutor(this)
         backExecutor.schedule({
             mainExecutor.execute{
-                //startActivity(Intent(applicationContext, LogInActivity::class.java))
-                //startActivity(Intent(applicationContext, MainActivity::class.java))
-                startActivity(Intent(applicationContext, VerifyResultActivity1::class.java))
+                startActivity(Intent(applicationContext, LogInActivity::class.java))
                 finish()
             }
         }, 2, TimeUnit.SECONDS)
