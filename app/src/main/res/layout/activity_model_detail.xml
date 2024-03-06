@@ -60,7 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img_model_sample" />
+                        android:src="@drawable/img_model_1" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                             android:textColor="@color/white"
                             android:textSize="36dp"
                             android:textStyle="bold"
-                            android:text="배우명" />
+                            android:text="고윤정" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="#CCFFFFFF"
                                 android:textSize="14dp"
-                                android:text="직업" />
+                                android:text="영화ㆍ드라마배우" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="#CCFFFFFF"
                                 android:textSize="14dp"
-                                android:text="소속사명" />
+                                android:text="MMA" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="#CCFFFFFF"
                                 android:textSize="14dp"
-                                android:text="데뷔 일자" />
+                                android:text="2019년 데뷔" />
 
                         </LinearLayout>
 
@@ -200,102 +200,116 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/issue_graph"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_positive"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/issue_graph"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/ic_positive"/>-->
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="30dp"
-                android:orientation="horizontal">
+                android:layout_height="440dp">
 
                 <ImageView
-                    android:layout_width="42dp"
-                    android:layout_height="155dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="3dp"
-                    android:padding="8dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/model_issue_group"/>
-
-                <LinearLayout
+                    android:id="@+id/graph"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_model_detail_graph" />
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="46dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@drawable/bg_model_issue_box" >
+            </FrameLayout>
 
-                        <TextView
-                            android:id="@+id/keyword1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="13dp"
-                            android:textColor="#CDCBD4"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginVertical="4dp"
-                            android:layout_gravity="center"
-                            android:text="환혼 2 출연으로, '라이징 스타' 배우 재발견" />
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginVertical="20dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginRight="30dp"-->
+<!--                android:orientation="horizontal">-->
 
-                    </FrameLayout>
+<!--                <ImageView-->
+<!--                    android:layout_width="42dp"-->
+<!--                    android:layout_height="155dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:layout_marginTop="3dp"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/model_issue_group"/>-->
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="46dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/bg_model_issue_box" >
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
 
-                        <TextView
-                            android:id="@+id/keyword2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="13dp"
-                            android:textColor="#CDCBD4"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginVertical="4dp"
-                            android:layout_gravity="center"
-                            android:text="'무빙'MZ 세대가 열광한 고윤정" />
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="46dp"-->
+<!--                        android:layout_marginBottom="12dp"-->
+<!--                        android:background="@drawable/bg_model_issue_box" >-->
 
-                    </FrameLayout>
+<!--                        <TextView-->
+<!--                            android:id="@+id/keyword1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="13dp"-->
+<!--                            android:textColor="#CDCBD4"-->
+<!--                            android:layout_marginHorizontal="6dp"-->
+<!--                            android:layout_marginVertical="4dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="환혼 2 출연으로, '라이징 스타' 배우 재발견" />-->
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="46dp"
-                        android:background="@drawable/bg_model_issue_box" >
+<!--                    </FrameLayout>-->
 
-                        <TextView
-                            android:id="@+id/keyword3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="13dp"
-                            android:textColor="#CDCBD4"
-                            android:layout_marginHorizontal="6dp"
-                            android:layout_marginVertical="4dp"
-                            android:layout_gravity="center"
-                            android:text="고윤정 졸업 사진 논란에, '원본 공개했다'" />
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="46dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:background="@drawable/bg_model_issue_box" >-->
 
-                    </FrameLayout>
+<!--                        <TextView-->
+<!--                            android:id="@+id/keyword2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="13dp"-->
+<!--                            android:textColor="#CDCBD4"-->
+<!--                            android:layout_marginHorizontal="6dp"-->
+<!--                            android:layout_marginVertical="4dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="'무빙'MZ 세대가 열광한 고윤정" />-->
 
-                </LinearLayout>
+<!--                    </FrameLayout>-->
 
-            </LinearLayout>
+<!--                    <FrameLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="46dp"-->
+<!--                        android:background="@drawable/bg_model_issue_box" >-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/keyword3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="13dp"-->
+<!--                            android:textColor="#CDCBD4"-->
+<!--                            android:layout_marginHorizontal="6dp"-->
+<!--                            android:layout_marginVertical="4dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="고윤정 졸업 사진 논란에, '원본 공개했다'" />-->
+
+<!--                    </FrameLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:orientation="horizontal">
 
@@ -303,6 +317,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"
@@ -385,7 +400,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:orientation="vertical">
 
@@ -418,7 +434,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:orientation="vertical">
 
@@ -452,7 +469,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"
                 android:orientation="vertical">
 
