@@ -14,7 +14,12 @@
         android:theme="@style/Theme.SoulLive"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".VerifyResultDetailActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".verify_result_go.VerifyResultActivity1"
+            android:exported="false" />
         <activity
             android:name=".verify.GuideVerifyActivity"
             android:exported="true" />
@@ -24,16 +29,15 @@
         <activity
             android:name=".verify.DoVerifyActivity2"
             android:exported="true" />
-
-        <activity android:name=".search.SearchModelActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".search.SearchModelActivity"
+            android:exported="true" />
         <activity
             android:name=".home.ModelDetailActivity"
             android:exported="false" />
         <activity
             android:name=".home.HomeAiModelDetailActivity"
             android:exported="false" />
-
         <activity
             android:name=".onboarding.OnboardingDoneActivity"
             android:exported="true" />
@@ -46,7 +50,6 @@
         <activity
             android:name=".LogInActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -60,15 +63,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true"
             android:launchMode="singleTask">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -77,7 +78,6 @@
                     android:scheme="@string/kakao_app_key2" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
