@@ -63,6 +63,11 @@ class DoVerifyActivity3 : AppCompatActivity() {
             finish()
         }
 
+        binding.guideBtn.setOnClickListener {
+            val guideDialog = GuideDialogFragment()
+            guideDialog.show(supportFragmentManager, guideDialog.tag)
+        }
+
 
     }
 
