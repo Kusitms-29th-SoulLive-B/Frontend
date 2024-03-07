@@ -273,8 +273,104 @@
 
     </LinearLayout>
 
-        
 
+    <ImageView
+        android:id="@+id/chooseAge1_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="25dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/chooseAge2_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="68dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/chooseAge3_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="125dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/chooseAge4_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="185dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/chooseAge5_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="235dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/chooseAge6_iv"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/age_verify"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:layout_marginLeft="290dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="320dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/age_number_box_verify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="~"
+        android:textColor="#5B5B71"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="대"
+        android:textColor="#5B5B71"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        android:layout_marginRight="50dp"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -291,7 +387,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
