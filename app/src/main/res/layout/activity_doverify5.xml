@@ -274,6 +274,17 @@
 
     </LinearLayout>
 
+    <SeekBar
+        android:layout_width="320dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        android:thumb="@drawable/seekbar_seekbar1_thumb"
+        android:progressDrawable="@drawable/seekbar_seekbar1"/>
+
+
 
     <ImageView
         android:id="@+id/chooseAge1_iv"
@@ -340,6 +351,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView8"
         android:layout_marginLeft="290dp"
         android:visibility="gone"/>
+
 
     <ImageView
         android:id="@+id/imageView9"
