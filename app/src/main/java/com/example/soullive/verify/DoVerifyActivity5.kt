@@ -51,9 +51,9 @@ class DoVerifyActivity5:AppCompatActivity() {
                     chooseText.visibility = View.VISIBLE
                     selectedCount++
                 }
-                /*if (selectedCount == 2){
+                if (selectedCount == 1){
                     binding.checkAllBtn.isEnabled
-                }*/
+                }
                 updateButtonState(binding.nextVerify2Btn)
             }
 
@@ -63,9 +63,15 @@ class DoVerifyActivity5:AppCompatActivity() {
                 selectedCount--
                 updateButtonState(binding.nextVerify2Btn)
             }
-
-
+            binding.checkAllBtn.setOnClickListener {
+                binding.boyChooseBtn.visibility = View.GONE
+                binding.girlChooseBtn.visibility = View.GONE
+                binding.boyChooseTv.visibility = View.GONE
+                binding.girlChooseTv.visibility = View.GONE
+                selectedCount-=2
+            }
         }
+
     }
 
     private fun updateButtonState(button: View) {
