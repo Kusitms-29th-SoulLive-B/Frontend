@@ -23,6 +23,11 @@ class DoVerifyActivity4 : AppCompatActivity() {
             finish()
         }
 
+        binding.guideBtn.setOnClickListener {
+            val guideDialog = GuideDialogFragment()
+            guideDialog.show(supportFragmentManager, guideDialog.tag)
+        }
+
         val imageViews = listOf(
             binding.contents1, binding.contents2, binding.contents3,
             binding.contents4, binding.contents5, binding.contents6

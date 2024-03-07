@@ -59,8 +59,8 @@ class GuideDialogFragment : DialogFragment() {
         val deviceWidth = size . x
 
         // 다이얼로그의 높이를 디바이스 높이의 25%로 설정
-        params?.height = (deviceHeight * 0.25).toInt()
-        params?.width = (deviceWidth * 0.85).toInt()
+        //params?.height = (deviceHeight * 0.25).toInt()
+        //params?.width = (deviceWidth * 0.85).toInt()
 
         dialog?.window?.attributes = params as WindowManager.LayoutParams
     }
