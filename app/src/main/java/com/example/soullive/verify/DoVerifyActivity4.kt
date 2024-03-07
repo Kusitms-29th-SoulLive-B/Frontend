@@ -19,27 +19,23 @@ class DoVerifyActivity4 : AppCompatActivity() {
         setContentView(binding.root)
 
         val imageViews = listOf(
-            binding.contents1, binding.contents2, binding.contents3
-            /*binding.keyword4Ib, binding.keyword5Ib, binding.keyword6Ib,
-            binding.keyword7Ib, binding.keyword8Ib, binding.keyword9Ib*/
+            binding.contents1, binding.contents2, binding.contents3,
+            binding.contents4, binding.contents5, binding.contents6
         )
 
         val chooseViews = listOf(
-            binding.choose1Iv, binding.choose2Iv, binding.choose3Iv
-            /*binding.choose4Ib, binding.choose5Ib, binding.choose6Ib,
-            binding.choose7Ib, binding.choose8Ib, binding.choose9Ib*/
+            binding.choose1Iv, binding.choose2Iv, binding.choose3Iv,
+            binding.choose4Iv, binding.choose5Iv, binding.choose6Iv
         )
 
         val textViews = listOf(
-            binding.text1Tv, binding.text2Tv, binding.text3Tv
-            /*binding.keyword4Ib, binding.keyword5Ib, binding.keyword6Ib,
-            binding.keyword7Ib, binding.keyword8Ib, binding.keyword9Ib*/
+            binding.text1Tv, binding.text2Tv, binding.text3Tv,
+            binding.text4Tv, binding.text5Tv, binding.text6Tv
         )
 
         val chooseText = listOf(
-            binding.choose1Tv, binding.choose2Tv, binding.choose3Tv
-            /*binding.choose4Ib, binding.choose5Ib, binding.choose6Ib,
-            binding.choose7Ib, binding.choose8Ib, binding.choose9Ib*/
+            binding.choose1Tv, binding.choose2Tv, binding.choose3Tv,
+            binding.choose4Tv, binding.choose5Tv, binding.choose6Tv
         )
 
         for (i in imageViews.indices) {
