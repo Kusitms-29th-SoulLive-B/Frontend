@@ -1,5 +1,6 @@
 package com.example.soullive.verify
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -54,7 +55,12 @@ class DoVerifyActivity3 : AppCompatActivity() {
         }
 
         binding.nextVerify2Btn.setOnClickListener {
+            val intent = Intent(this, DoVerifyActivity4::class.java)
+            startActivity(intent)
+        }
 
+        binding.previous2Ib.setOnClickListener {
+            finish()
         }
 
 
