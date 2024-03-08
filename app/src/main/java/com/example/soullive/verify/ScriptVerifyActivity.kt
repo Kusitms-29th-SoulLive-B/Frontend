@@ -42,7 +42,8 @@ class ScriptVerifyActivity : AppCompatActivity() {
         }
 
         binding.nextVerify2Btn.setOnClickListener {
-            val intent = Intent(this,)
+            val intent = Intent(this,ScriptVerifyActivity2::class.java)
+            startActivity(intent)
         }
 
     }
