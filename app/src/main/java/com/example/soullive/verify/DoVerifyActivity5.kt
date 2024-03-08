@@ -72,6 +72,9 @@ class DoVerifyActivity5:AppCompatActivity() {
             }
         }
 
+        binding.ageSlider.setStepSize(10f)
+
+
     }
 
     private fun updateButtonState(button: View) {

@@ -275,7 +275,7 @@
     </LinearLayout>
 
     <com.google.android.material.slider.RangeSlider
-        android:id="@+id/age_seekbar"
+        android:id="@+id/age_slider"
         android:layout_width="340dp"
         android:layout_height="42dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -367,6 +367,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="~"
@@ -378,15 +379,41 @@
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <TextView
+        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
         android:text="대"
         android:textColor="#5B5B71"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="#878793"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        android:layout_marginRight="50dp"/>
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textColor="#878793"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
 
 
     <androidx.appcompat.widget.AppCompatButton
