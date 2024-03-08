@@ -1,5 +1,6 @@
 package com.example.soullive.verify
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -26,6 +27,11 @@ class DoVerifyActivity5:AppCompatActivity() {
         binding.guideBtn.setOnClickListener {
             val guideDialog = GuideDialogFragment()
             guideDialog.show(supportFragmentManager, guideDialog.tag)
+        }
+
+        binding.nextVerify2Btn.setOnClickListener {
+            val intent = Intent(this, DoVerifyActivity6::class.java)
+            startActivity(intent)
         }
 
         val textViews = listOf(

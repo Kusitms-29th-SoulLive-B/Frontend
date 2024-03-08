@@ -18,6 +18,9 @@
         <activity android:name=".verify.DoVerifyActivity3"
             android:exported="true"/>
 
+        <activity android:name=".verify.DoVerifyActivity6"
+            android:exported="true"/>
+
         <activity android:name=".verify.DoVerifyActivity5"
             android:exported="true"/>
 
