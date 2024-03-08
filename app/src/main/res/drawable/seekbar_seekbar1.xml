@@ -3,7 +3,7 @@
     <item android:id="@android:id/progress">
         <scale
             android:drawable="@drawable/seekbar_verify"
-            android:scaleHeight="100%"
+            android:scaleHeight="0%"
             android:scaleWidth="100%" />
     </item>
 </layer-list>
