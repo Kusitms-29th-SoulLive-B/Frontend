@@ -6,7 +6,8 @@
     </style>
 
     <style name="CustomThumbStyle" parent="Widget.MaterialComponents.Slider">
-        <item name="thumbColor">@android:color/transparent</item>
+        <!--<item name="thumbColor">@android:color/transparent</item>-->
+        <item name="haloColor">@android:color/transparent</item>
     </style>
 
 

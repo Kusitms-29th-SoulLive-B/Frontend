@@ -1,11 +1,12 @@
 package com.example.soullive.verify
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soullive.R
-import com.example.soullive.databinding.ActivityDoverify4Binding
 import com.example.soullive.databinding.ActivityDoverify5Binding
+import com.google.android.material.slider.RangeSlider
 
 class DoVerifyActivity5:AppCompatActivity() {
 
@@ -74,6 +75,7 @@ class DoVerifyActivity5:AppCompatActivity() {
 
         binding.ageSlider.setStepSize(10f)
 
+        binding.ageSlider.addOnSliderTouchListener(rangeSliderTouchListener)
 
     }
 
@@ -86,4 +88,24 @@ class DoVerifyActivity5:AppCompatActivity() {
             button.isEnabled = false // 버튼 비활성화
         }
     }
-}
+
+    private val rangeSliderTouchListener: RangeSlider.OnSliderTouchListener =
+        object : RangeSlider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: RangeSlider) {
+//                    바가 시작하면 동작하는 부분
+            }
+
+            override fun onStopTrackingTouch(slider: RangeSlider) {
+//                    유저가 바에서 손을 떄었을때 동작하는 함수
+//                    slider.getValues() 값이 [0.0, 5.0]처럼 배열로 값이 들어있다.
+                val miniNumber = java.lang.Float.toString(slider.values[0]).indexOf(".")
+                val maxNumber = java.lang.Float.toString(slider.values[1]).indexOf(".")
+                val minVal = java.lang.Float.toString(slider.values[0]).substring(0, miniNumber)
+                val maxVal = java.lang.Float.toString(slider.values[1]).substring(0, maxNumber)
+
+                Log.d("DualThumbSeekbar ", "onStopTrackingTouch minPrice : " + minVal)
+                Log.d("DualThumbSeekbar ", "onStopTrackingTouch maxPrice : " + maxVal)
+                binding.minAgeTv.setText(minVal)
+                binding.maxAgeTv.setText(maxVal)
+            }
+        }}
