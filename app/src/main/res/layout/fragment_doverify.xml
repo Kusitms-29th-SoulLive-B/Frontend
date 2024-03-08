@@ -24,6 +24,7 @@
         android:layout_marginLeft="20dp"/>
 
     <ImageButton
+        android:id="@+id/file_ib"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:background="@drawable/file_verify"
