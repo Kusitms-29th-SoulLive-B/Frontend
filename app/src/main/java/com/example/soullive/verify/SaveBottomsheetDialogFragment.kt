@@ -1,5 +1,6 @@
 package com.example.soullive.verify
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import com.example.soullive.databinding.FragmentBottomsheetDialogBinding
 import com.example.soullive.databinding.FragmentSaveBottomsheetDialogBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class SaveBottomsheetDialogFragment : BottomSheetDialogFragment() {
+class SaveBottomsheetDialogFragment(context: Context) : BottomSheetDialogFragment() {
 
     lateinit var binding : FragmentSaveBottomsheetDialogBinding
     override fun onCreateView(
