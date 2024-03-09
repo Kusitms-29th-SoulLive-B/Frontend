@@ -17,4 +17,12 @@
         <item name="android:windowBackground">@drawable/splash</item>
         <item name="android:windowIsTranslucent">true</item>
     </style>
+
+    <style name="RoundCornerBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/RoundCornerModalStyle</item>
+    </style>
+
+    <style name="RoundCornerModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/white_round_top_border_20</item>
+    </style>
 </resources>

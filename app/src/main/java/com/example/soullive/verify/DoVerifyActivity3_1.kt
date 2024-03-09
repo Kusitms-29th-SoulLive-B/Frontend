@@ -9,17 +9,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.example.soullive.R
 import com.example.soullive.databinding.ActivityDoverify2Binding
+import com.example.soullive.databinding.ActivityDoverify31Binding
 import com.example.soullive.databinding.ActivityDoverify3Binding
 
-class DoVerifyActivity3 : AppCompatActivity() {
+class DoVerifyActivity3_1 : AppCompatActivity() {
 
-    lateinit var binding: ActivityDoverify3Binding
+    lateinit var binding: ActivityDoverify31Binding
     private var selectedCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityDoverify3Binding.inflate(layoutInflater)
+        binding = ActivityDoverify31Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -56,7 +57,7 @@ class DoVerifyActivity3 : AppCompatActivity() {
         }
 
         binding.nextVerify2Btn.setOnClickListener {
-            val intent = Intent(this, DoVerifyActivity3_1::class.java)
+            val intent = Intent(this, DoVerifyActivity4::class.java)
             startActivity(intent)
         }
 
