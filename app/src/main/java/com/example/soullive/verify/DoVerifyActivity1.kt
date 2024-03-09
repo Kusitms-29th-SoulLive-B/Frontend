@@ -39,6 +39,10 @@ class DoVerifyActivity1 : AppCompatActivity() {
             hideKeyboard()
         }
 
+        binding.showPreviousIb.setOnClickListener {
+
+        }
+
     }
 
     private val textWatcher = object : TextWatcher {
