@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soullive.MainActivity
 import com.example.soullive.databinding.ActivityDoverify9Binding
+import com.example.soullive.verify_result_it.VerifyResultActivity2
 
 class DoVerifyActivity9:AppCompatActivity() {
 
@@ -23,6 +24,7 @@ class DoVerifyActivity9:AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
 
 
     }

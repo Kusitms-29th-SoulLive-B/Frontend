@@ -33,7 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".verify_result_it.VerifyResultActivity2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".verify_result_go.VerifyResultDetailActivity4"
             android:exported="false" />
