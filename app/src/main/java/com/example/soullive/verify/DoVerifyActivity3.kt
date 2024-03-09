@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import com.example.soullive.R
 import com.example.soullive.databinding.ActivityDoverify2Binding
 import com.example.soullive.databinding.ActivityDoverify3Binding
@@ -68,6 +69,13 @@ class DoVerifyActivity3 : AppCompatActivity() {
             guideDialog.show(supportFragmentManager, guideDialog.tag)
         }
 
+        binding.nextVerify3Btn.setOnClickListener {
+            val bottomSheet = VerifyBottomSheetDialogFragment(this)
+            bottomSheet.setStyle(DialogFragment.STYLE_NORMAL, R.style.RoundCornerBottomSheetDialogTheme)
+            bottomSheet.show(supportFragmentManager,bottomSheet.tag)
+
+        }
+
 
     }
 
@@ -80,6 +88,7 @@ class DoVerifyActivity3 : AppCompatActivity() {
             button.isEnabled = false // 버튼 비활성화
         }
     }
+
 
 
 }

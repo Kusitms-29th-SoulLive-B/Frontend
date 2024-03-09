@@ -375,8 +375,18 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_verify3_btn"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/editself_verify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next_verify2_btn"
-        android:layout_width="340dp"
+        android:layout_width="155dp"
         android:layout_height="60dp"
         android:layout_marginTop="29dp"
         android:background="@drawable/gray_btn"
@@ -386,7 +396,7 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/next_verify3_btn"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
 
