@@ -49,7 +49,7 @@
             android:name=".verify.DoVerifyActivity4"
             android:exported="true" />
         <activity
-            android:name=".verify.GuideVerifyActivity"
+            android:name=".verify.DoVerifyActivity3_1"
             android:exported="true" />
         <activity
             android:name=".verify.DoVerifyActivity1"
