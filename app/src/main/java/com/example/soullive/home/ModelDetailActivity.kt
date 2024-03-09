@@ -45,8 +45,8 @@ class ModelDetailActivity : AppCompatActivity() {
     private fun loadAdList() {
         // 임시로 더미 데이터 생성
         val ads = listOf(
-            Ad(R.drawable.img_model_favor_sample, R.drawable.img_model_sample),
-            Ad(R.drawable.img_model_sample, R.drawable.img_ad_logo_sample))
+            Ad(R.drawable.img_model_ad_detail, R.drawable.img_ad_logo_sample),
+            Ad(R.drawable.img_model_ad_detail_2, R.drawable.img_logo_pu))
 
         // 어댑터에 데이터 설정
         recentAdAdapter.updateData(ads)

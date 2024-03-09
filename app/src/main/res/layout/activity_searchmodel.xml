@@ -11,15 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/back_btn"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="43dp"
-            android:background="@drawable/back_search"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/back_btn"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/back_btn"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="43dp"-->
+<!--            android:background="@drawable/back_search"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <ImageView
             android:layout_width="330dp"
@@ -58,7 +66,7 @@
         android:id="@+id/recentModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="최근 모델"
         android:textColor="@color/white"
@@ -73,7 +81,7 @@
         android:src="@drawable/search01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recentModel"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"/>
 
     <ImageView
@@ -84,7 +92,7 @@
         android:src="@drawable/search2"
         app:layout_constraintStart_toEndOf="@+id/recentModel01"
         app:layout_constraintTop_toBottomOf="@+id/recentModel"
-        android:layout_marginLeft="30dp"/>
+        android:layout_marginLeft="12dp"/>
 
     <TextView
         android:id="@+id/recentSearch_tv"
@@ -95,8 +103,8 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recentModel01"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
 
 
     <ListView
