@@ -116,11 +116,11 @@ class HomeFragment : Fragment() {
     private fun loadAiModelList() {
         // 임시로 더미 데이터 생성
         val models = listOf(
-            Model(2, "아이유", "가수", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
+            Model(1, "고윤정", "배우", R.drawable.img_model_1),
+            Model(2, "민스코", "인플루언서", R.drawable.img_model_home_1),
+            Model(3, "이도현", "베우", R.drawable.img_model_sample),
+            Model(4, "안유진", "아이돌 가수", R.drawable.img_model_home_2),
+            Model(5, "잇섭", "인플루언서", R.drawable.img_model_it_detail),
         )
 
         // 어댑터에 데이터 설정
@@ -130,10 +130,10 @@ class HomeFragment : Fragment() {
     private fun loadSelectedModelList() {
         // 임시로 더미 데이터 생성
         val models = listOf(
-            Model(2, "아이유", "가수", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
+            ModelSelected(1, "박제니", "인플루언서", "LG", R.drawable.img_company_sample,
+            "열정적인", "힙한", R.drawable.img_model_home_3),
+            ModelSelected(2, "뉴진스", "아이돌 가수", "Apple", R.drawable.img_company_sample_2,
+                "상큼한", "활기찬", R.drawable.img_model_home_4),
         )
 
         // 어댑터에 데이터 설정
@@ -143,10 +143,10 @@ class HomeFragment : Fragment() {
     private fun loadKeywordModelList() {
         // 임시로 더미 데이터 생성
         val models = listOf(
-            Model(2, "아이유", "가수", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
-            Model(1, "이도현", "베우", ""),
+            ModelSelected(1, "이정재", "배우", "하림 더미식", R.drawable.img_company_sample,
+                "고급스러운", "라면도 품격있게", R.drawable.img_model_home_5),
+            ModelSelected(2, "정해인", "배우", "푸라닭", R.drawable.img_company_sample,
+                "고급스러운", "프리미엄 명품 치킨", R.drawable.img_model_home_6),
         )
 
         // 어댑터에 데이터 설정

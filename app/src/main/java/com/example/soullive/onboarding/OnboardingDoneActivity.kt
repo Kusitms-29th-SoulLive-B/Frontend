@@ -25,6 +25,7 @@ class OnboardingDoneActivity : AppCompatActivity() {
         binding.doneBtn.setOnClickListener { //완료 클릭 시
             // 모든 온보딩 액티비티를 종료하고 메인으로 이동
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("showPopup", true) // 팝업을 보여주기 위한 플래그를 전달
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish()

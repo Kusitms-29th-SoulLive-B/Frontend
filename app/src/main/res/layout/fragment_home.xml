@@ -57,7 +57,7 @@
                     android:textColor="@color/white"
                     android:textSize="24dp"
                     android:textStyle="bold"
-                    android:text="OOOO" />
+                    android:text="삼성전자" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,13 +78,13 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="145dp"
                 android:layout_marginTop="20dp" >
 
                 <ImageView
                     android:id="@+id/verify_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/homepage_ai_group"/>
 
@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#878793"
                     android:textSize="14dp"
-                    android:text="OOOO" />
+                    android:text="삼성전자" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -196,7 +196,7 @@
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="OO" />
+                    android:text="전자" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -266,7 +266,7 @@
                         android:layout_marginVertical="4dp"
                         android:layout_gravity="center"
                         android:textStyle="bold"
-                        android:text="키워드1" />
+                        android:text="급상승" />
 
                 </FrameLayout>
                 <FrameLayout
@@ -286,7 +286,7 @@
                         android:layout_marginVertical="4dp"
                         android:layout_gravity="center"
                         android:textStyle="bold"
-                        android:text="키워드2" />
+                        android:text="고급스러운" />
 
                 </FrameLayout>
                 <FrameLayout
@@ -306,7 +306,7 @@
                         android:layout_marginVertical="4dp"
                         android:layout_gravity="center"
                         android:textStyle="bold"
-                        android:text="키워드3" />
+                        android:text="성실한" />
 
                 </FrameLayout>
                 <FrameLayout
@@ -326,7 +326,7 @@
                         android:layout_marginVertical="4dp"
                         android:layout_gravity="center"
                         android:textStyle="bold"
-                        android:text="키워드4" />
+                        android:text="MZ스러운" />
 
                 </FrameLayout>
 

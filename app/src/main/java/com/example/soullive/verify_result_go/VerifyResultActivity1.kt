@@ -1,7 +1,9 @@
 package com.example.soullive.verify_result_go
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.soullive.MainActivity
 import com.example.soullive.R
 import com.example.soullive.databinding.ActivityVerifyResult1Binding
 import com.google.android.material.tabs.TabLayout
@@ -21,6 +23,9 @@ class VerifyResultActivity1 : AppCompatActivity() {
             .commit()
 
         binding.backBtn.setOnClickListener { // 뒤로 가기 버튼
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
             finish()
         }
 

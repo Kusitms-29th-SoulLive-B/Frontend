@@ -57,11 +57,26 @@ class HomeAiModelDetailActivity : AppCompatActivity() {
     private fun loadListModel() {
         // 임시로 더미 데이터 생성
         val models = listOf(
-            Model(1, "모델1", "직업1", "이미지1"),
-            Model(2, "모델2", "직업2", "이미지2"),
-            Model(3, "모델3", "직업3", "이미지3"),
-            Model(4, "모델4", "직업4", "이미지4"),
-            Model(5, "모델5", "직업5", "이미지5")
+            ModelAi(1, "고윤정", "배우", "떠오르는", "고급스러운",
+                R.drawable.img_model_1, "20", "여성"),
+            ModelAi(2, "민스코", "인플루언서", "친근한", "감각있는",
+                R.drawable.img_model_home_1, "30", "여성"),
+            ModelAi(3, "이도현", "배우", "부드러운", "성실한",
+                R.drawable.img_model_sample, "20", "여성"),
+            ModelAi(4, "안유진", "아이돌 가수", "밝은", "친근한",
+                R.drawable.img_model_home_2, "10", "모두"),
+            ModelAi(5, "잇섭", "인플루언서", "유머스러운", "밝은",
+                R.drawable.img_model_it_detail, "30", "남성"),
+            ModelAi(6, "노윤서", "배우", "고급진", "청순한",
+                R.drawable.img_model_home_7, "20", "여성"),
+            ModelAi(1, "고윤정", "배우", "떠오르는", "고급스러운",
+                R.drawable.img_model_1, "20", "여성"),
+            ModelAi(2, "민스코", "인플루언서", "친근한", "감각있는",
+                R.drawable.img_model_home_1, "30", "여성"),
+            ModelAi(3, "이도현", "배우", "부드러운", "성실한",
+                R.drawable.img_model_sample, "20", "여성"),
+            ModelAi(4, "안유진", "아이돌 가수", "밝은", "친근한",
+                R.drawable.img_model_home_2, "10", "모두"),
         )
 
         // 어댑터에 데이터 설정
@@ -71,11 +86,26 @@ class HomeAiModelDetailActivity : AppCompatActivity() {
     private fun loadGalleryModel() {
         // 임시로 더미 데이터 생성
         val models = listOf(
-            Model(1, "모델1", "직업1", "이미지1"),
-            Model(2, "모델2", "직업2", "이미지2"),
-            Model(3, "모델3", "직업3", "이미지3"),
-            Model(4, "모델4", "직업4", "이미지4"),
-            Model(5, "모델5", "직업5", "이미지5")
+            ModelAi(1, "고윤정", "배우", "떠오르는", "고급스러운",
+                R.drawable.img_model_1, "20", "여성"),
+            ModelAi(2, "민스코", "인플루언서", "친근한", "감각있는",
+                R.drawable.img_model_home_1, "30", "여성"),
+            ModelAi(3, "이도현", "배우", "부드러운", "성실한",
+                R.drawable.img_model_sample, "20", "여성"),
+            ModelAi(4, "안유진", "아이돌 가수", "밝은", "친근한",
+                R.drawable.img_model_home_2, "10", "모두"),
+            ModelAi(5, "잇섭", "인플루언서", "유머스러운", "밝은",
+                R.drawable.img_model_it_detail, "30", "남성"),
+            ModelAi(6, "노윤서", "배우", "고급진", "청순한",
+                R.drawable.img_model_home_7, "20", "여성"),
+            ModelAi(1, "고윤정", "배우", "떠오르는", "고급스러운",
+                R.drawable.img_model_1, "20", "여성"),
+            ModelAi(2, "민스코", "인플루언서", "친근한", "감각있는",
+                R.drawable.img_model_home_1, "30", "여성"),
+            ModelAi(3, "이도현", "배우", "부드러운", "성실한",
+                R.drawable.img_model_sample, "20", "여성"),
+            ModelAi(4, "안유진", "아이돌 가수", "밝은", "친근한",
+                R.drawable.img_model_home_2, "10", "모두"),
         )
 
         // 어댑터에 데이터 설정

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.soullive.R
 
-class HomeSelectedModelAdapter(private var models: List<Model>)
+class HomeSelectedModelAdapter(private var models: List<ModelSelected>)
     : RecyclerView.Adapter<HomeSelectedModelAdapter.HomeSelectedModelViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeSelectedModelViewHolder {
@@ -28,7 +28,7 @@ class HomeSelectedModelAdapter(private var models: List<Model>)
     }
 
     // 데이터 업데이트 메서드
-    fun updateData(newModels: List<Model>) {
+    fun updateData(newModels: List<ModelSelected>) {
         models = newModels
         notifyDataSetChanged()
     }
@@ -53,8 +53,18 @@ class HomeSelectedModelAdapter(private var models: List<Model>)
             }
         }
 
-        fun bind(modelList: Model) {
+        fun bind(modelList: ModelSelected) {
             modelName.text = modelList.name
+            modelJob.text = modelList.job
+            keyword1.text = modelList.keyword1
+            keyword2.text = modelList.keyword2
+            companyName.text = modelList.company
+
+            Glide.with(itemView.context)
+                .load(modelList.companyImg)
+                .placeholder(R.drawable.img_company_sample) // 플레이스홀더 이미지 리소스
+                .error(R.drawable.img_company_sample) // 에러 이미지 리소스
+                .into(companyImage)
 
             Glide.with(itemView.context)
                 .load(modelList.image)
