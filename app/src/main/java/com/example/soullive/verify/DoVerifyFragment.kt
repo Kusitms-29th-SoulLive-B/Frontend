@@ -24,6 +24,11 @@ class DoVerifyFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.fileIb.setOnClickListener {
+            val intent = Intent(context, ScriptVerifyActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 }
