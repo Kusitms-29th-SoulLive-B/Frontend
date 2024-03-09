@@ -35,6 +35,7 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginLeft="25dp"
+        android:textColor="@color/white"
         android:hint="셀럽이나 인플루언서를 검색해보세요"
         android:textColorHint="#5B5B71"
         app:layout_constraintEnd_toEndOf="parent"
