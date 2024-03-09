@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import com.example.soullive.R
 import com.example.soullive.databinding.ActivityDoverify1Binding
 
@@ -37,6 +38,14 @@ class DoVerifyActivity1 : AppCompatActivity() {
         binding.root.setOnClickListener {
             // 화면의 다른 부분을 클릭하면 EditText의 포커스를 해제하고 키보드를 내림
             hideKeyboard()
+        }
+
+        binding.showPreviousIb.setOnClickListener {
+
+            val bottomSheet = SaveBottomsheetDialogFragment(this)
+            bottomSheet.setStyle(DialogFragment.STYLE_NORMAL, R.style.RoundCornerBottomSheetDialogTheme)
+            bottomSheet.show(supportFragmentManager,bottomSheet.tag)
+
         }
 
     }
