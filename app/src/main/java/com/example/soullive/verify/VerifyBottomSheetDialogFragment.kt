@@ -63,6 +63,9 @@ class VerifyBottomSheetDialogFragment(context: Context) : BottomSheetDialogFragm
 
             } else{
                 binding.textCount.setText("${binding.editText.length()}/30")
+                binding.eraseBtn.setOnClickListener {
+                    binding.editText.setText("")
+                }
             }
         }
 

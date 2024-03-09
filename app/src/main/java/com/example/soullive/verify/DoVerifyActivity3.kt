@@ -77,6 +77,7 @@ class DoVerifyActivity3 : AppCompatActivity() {
         }
 
 
+
     }
 
     private fun updateButtonState(button: View) {
