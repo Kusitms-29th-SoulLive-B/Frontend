@@ -32,6 +32,7 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="#333244"
         android:hint="내용 입력"
+        android:textColor="@color/white"
         android:maxLength="30"
         android:textColorHint="#333244"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +47,7 @@
         android:background="@drawable/close_verify2"
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        android:layout_marginLeft="-30dp"/>
+        android:layout_marginLeft="-10dp"/>
 
     <TextView
         android:id="@+id/textCount"
