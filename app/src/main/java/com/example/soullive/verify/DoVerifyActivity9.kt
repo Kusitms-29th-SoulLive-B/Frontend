@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soullive.MainActivity
 import com.example.soullive.databinding.ActivityDoverify9Binding
-import com.example.soullive.verify_result_it.VerifyResultActivity2
+import com.example.soullive.verify_result_go.VerifyResultActivity1
 
 class DoVerifyActivity9:AppCompatActivity() {
 
@@ -25,7 +25,10 @@ class DoVerifyActivity9:AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        binding.nextVerify2Btn.setOnClickListener {
+            val intent = Intent(this, VerifyResultActivity1::class.java)
+            startActivity(intent)
+        }
 
     }
 }
