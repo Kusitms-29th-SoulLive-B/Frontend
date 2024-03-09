@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
 
