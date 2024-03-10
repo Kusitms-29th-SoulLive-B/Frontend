@@ -21,6 +21,7 @@
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:textColor="@color/white"
+        android:fontFamily="@font/pretendard_medium"
         android:hint="찾고 싶은 검증의 상품명을 입력하세요 "
         android:textColorHint="#5B5B71"
         app:layout_constraintBottom_toBottomOf="@+id/imageView11"
