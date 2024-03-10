@@ -56,6 +56,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="상세 정보를 입력해볼까요?"
+        android:fontFamily="@font/pretendard_medium"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
