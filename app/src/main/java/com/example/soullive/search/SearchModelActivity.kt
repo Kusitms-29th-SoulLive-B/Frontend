@@ -1,9 +1,11 @@
 package com.example.soullive.search
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soullive.home.RecentModelRVAdapter
 import com.example.soullive.databinding.ActivitySearchmodelBinding
+import com.example.soullive.home.ModelDetailActivity
 
 class SearchModelActivity : AppCompatActivity(){
 
@@ -28,11 +30,14 @@ class SearchModelActivity : AppCompatActivity(){
                 recentSearchAdapter.notifyDataSetChanged() // 어댑터에 변경 사항을 알림
                 binding.searchEt.text.clear() // EditText의 텍스트를 지움
             }
+            val intent = Intent(this, ModelDetailActivity::class.java)
+            startActivity(intent)
         }
 
         binding.backBtn.setOnClickListener {
             finish()
         }
+
     }
 
 
